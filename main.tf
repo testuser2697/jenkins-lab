@@ -3,13 +3,13 @@ provider "aws" {
 }
 terraform {
   backend "s3" {
-    bucket         = "{your state bucket}"   
+    bucket         = "jenkins-state-michael"   
     key            = "terraform.tfstate"
     region         = "us-west-2"
     encrypt        = true
   }
 }
 resource "aws_s3_bucket" "example" {
-bucket = "Jenkins-test-bucket-{yournamehere}"
+bucket = "Jenkins-test-bucket-michael12"
 acl    = "private"
 }
